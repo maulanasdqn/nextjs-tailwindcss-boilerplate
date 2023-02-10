@@ -17,24 +17,15 @@ Requirements :
 - Axios
 - Husky
 
-## Project Structure
+## Recomendation Code Editor
 
-```
-├── components/
-├── hooks/
-├── pages/
-├── public/
-├── services/
-├── stores/
-├── styles/
-├── utilities/
-├── .eslintrc.json
-├── .gitignore
-├── .next.config.js
-├── package.json
-├── tsconfig.json
-├── yarn.lock
-```
+Visual Studio Code
+
+### Recomendation Extension
+
+- Stylelint
+- TailwindCSS Intelesense
+- Prettier
 
 ## Initial Setup
 
