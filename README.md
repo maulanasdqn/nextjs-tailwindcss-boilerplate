@@ -9,6 +9,7 @@ Requirements :
 - Tanstack Query
 - Jest
 - TailwindCSS
+- HeadlessUI
 - ESLint
 - Prettier
 - Nix Devenv
