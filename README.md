@@ -20,13 +20,20 @@ Requirements :
 ## Project Structure
 
 ```
+├── components/
+├── hooks/
 ├── pages/
 ├── public/
 ├── services/
-├── styles/
 ├── stores/
+├── styles/
+├── utilities/
+├── .eslintrc.json
 ├── .gitignore
 ├── .next.config.js
+├── package.json
+├── tsconfig.json
+├── yarn.lock
 ```
 
 ## Initial Setup
