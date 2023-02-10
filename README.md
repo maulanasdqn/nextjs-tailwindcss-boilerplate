@@ -1,38 +1,116 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# NextJS TailwindCSS BOILERPLATE
 
-## Getting Started
+Boilerplate NextJS dengan TailwindCSS sebagai Styling Unit
 
-First, run the development server:
+Requirements :
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+- React
+- Racoil
+- Tanstack Query
+- Jest
+- TailwindCSS
+- ESLint
+- Prettier
+- Nix Devenv
+- Nix Direnv
+- Docker
+- Axios
+- Husky
+
+## Project Structure
+
+```
+├── components/
+├── hooks/
+├── pages/
+├── public/
+├── services/
+├── stores/
+├── styles/
+├── utilities/
+├── .eslintrc.json
+├── .gitignore
+├── .next.config.js
+├── package.json
+├── tsconfig.json
+├── yarn.lock
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Initial Setup
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+- Clone Project ini ( Direkomendasikan menggunakan SSH )
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+> `git clone git@github.com:maulanasdqn/nextjs-tailwindcss-boilerplate`
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Install NodeJS dan Yarn
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Anda perlu menginstall dulu NodeJS dan Yarn ( Direkomendasikan menggunakan NodeJS Versi LTS )
 
-## Learn More
+> `npm i -g yarn`
 
-To learn more about Next.js, take a look at the following resources:
+## Install Dependency
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Pasang Dependency
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+> `yarn install`
 
-## Deploy on Vercel
+## Run Development Server
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Project bisa dijalankan dengan beberapa metode berikut
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+> `yarn dev`
+
+## Development With Nix
+
+Development dengan Nix membuat proses Develop menjadi lebih mudah dan ringkas, semua dependency akan terurus dengan sendirinya, juga independent artinya tidak akan menggangu environment yang lain
+
+- Pasang Nixpkgs
+
+> `sh <(curl -L https://nixos.org/nix/install) --no-daemon`
+
+- Pasang nix-flakes
+
+> `nix-env -iA nixpkgs.nixFlakes`
+
+- Setup nix-flakes \
+  Edit file yang ada di `~/.config/nix/nix.conf` atau `/etc/nix/nix.conf` dan tambahkan:
+
+> `experimental-features = nix-command flakes`
+
+- Pasang nix-direnv
+
+> `nix-env -f '<nixpkgs>' -iA nix-direnv`
+
+- Setup nix-direnv
+
+> `source $HOME/.nix-profile/share/nix-direnv/direnvrc`
+
+- Masuk ke folder yang sudah di clone kemudian jalankan perintah berikut
+
+> `direnv allow`
+
+- Dan enjoy tinggal tunggu dependency terinstall dengan sendirinya
+
+## Development with Docker
+
+Docker harus di pasang dulu jika belum ada
+
+- Pasang Docker bisa di unduh di https://docker.com
+
+- Setup Docker
+
+> `docker compose up`
+
+## Setup Env
+
+ENV di sesuaikan seperti yang ada di contoh .env.example
+
+- Rename file .env.example menjadi .env.local
+- Isi ENV sesuai dengan yang ada di dalam file .env.local nya
+
+## Setup Husky
+
+Untuk bisa menggunakan husky agar berjalan baik dan benar maka perlu di inisialisasi dulu
+
+- Jalankan perintah
+  > `npx husky-init`
