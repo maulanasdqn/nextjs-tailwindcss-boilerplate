@@ -1,10 +1,6 @@
 import ApiService from "@/services/Api";
 import TokenService from "@/services/Token";
-
-type AuthPayloadTypes = {
-  email: string;
-  password: string;
-};
+import { AuthPayloadTypes } from "@/utilities/types/Auth";
 
 const AuthService = {
   Login: async (payload: AuthPayloadTypes) => {
@@ -18,13 +14,14 @@ const AuthService = {
         email,
         password,
       },
-      url: "/auth/local/login",
+      url: "/auth/login",
     };
     try {
       const res = await ApiService.customRequest(requestData);
       TokenService.saveToken(res.data.access_token);
       TokenService.saveRefreshToken(res.data.refresh_token);
       ApiService.setHeader();
+      return res.data;
     } catch (error) {
       throw error;
     }
@@ -44,7 +41,7 @@ const AuthService = {
         "Content-Type": "application/json; charset=utf-8",
       },
       data: payload,
-      url: "/auth/local/register",
+      url: "/auth/register",
     };
     try {
       await ApiService.customRequest(requestData);
