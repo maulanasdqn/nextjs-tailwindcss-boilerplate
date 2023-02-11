@@ -5,6 +5,7 @@ Boilerplate NextJS dengan TailwindCSS sebagai Styling Unit
 Requirements :
 
 - React
+- Next
 - Racoil
 - Tanstack Query
 - React Hook Form
