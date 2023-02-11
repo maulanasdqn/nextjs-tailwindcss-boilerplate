@@ -7,6 +7,7 @@ Requirements :
 - React
 - Racoil
 - Tanstack Query
+- React Hook Form
 - Jest
 - TailwindCSS
 - HeadlessUI
