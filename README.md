@@ -5,8 +5,10 @@ Boilerplate NextJS dengan TailwindCSS sebagai Styling Unit
 Requirements :
 
 - React
+- Next
 - Racoil
 - Tanstack Query
+- React Hook Form
 - Jest
 - TailwindCSS
 - HeadlessUI
@@ -106,3 +108,8 @@ Untuk bisa menggunakan husky agar berjalan baik dan benar maka perlu di inisiali
 
 - Jalankan perintah
   > `npx husky-init`
+
+## Demo App
+
+- [Development Build](https://nextjs-tailwindcss-boilerplate-teal.vercel.app/)
+- [Production Build](https://nextjs-tailwindcss-boilerplate.netlify.app//)
