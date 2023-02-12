@@ -26,15 +26,19 @@ const NAVBAR_MENU = [
   },
 
   {
-    text: "About",
-    link: "/about",
+    text: "Course",
+    link: "/course",
+  },
+  {
+    text: "Price",
+    link: "/price",
   },
 ];
 
 const Navbar: FC = (): ReactElement => {
   return (
     <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
-      <div className="container flex flex-wrap items-center justify-between mx-auto">
+      <div className="fixed container flex flex-wrap items-center justify-between mx-auto">
         <a href="https://flowbite.com/" className="flex items-center">
           <Image
             src="https://flowbite.com/docs/images/logo.svg"
@@ -44,15 +48,17 @@ const Navbar: FC = (): ReactElement => {
             height={40}
           />
           <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
-            Flowbite
+            Course
           </span>
         </a>
 
         <div className="flex items-center md:order-2">
           <DropdownMenu list={DROPDOWN_NAVBAR_MENU}>
-            <Menu.Button className="flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600">
+            <Menu.Button className="flex mr-3 text-sm bg-gray-600 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600 p-2">
               <span className="sr-only">Open user menu</span>
-              <BiUserCircle />
+              <div className="text-3xl">
+                <BiUserCircle />
+              </div>
             </Menu.Button>
           </DropdownMenu>
         </div>

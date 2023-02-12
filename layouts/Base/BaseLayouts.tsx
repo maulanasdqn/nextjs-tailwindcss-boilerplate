@@ -10,7 +10,7 @@ const BaseLayouts: FC<BaseLayoutType> = ({ children }): ReactElement => {
   return (
     <>
       <Navbar />
-      <div className="flex h-screen justify-center items-center w-screen">{children}</div>
+      <div className="flex flex-col h-screen justify-center items-center w-screen">{children}</div>
       <Footbar />
     </>
   );
