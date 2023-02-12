@@ -1,7 +1,19 @@
-import { FC, ReactElement } from "react";
+import { FC, ReactElement, ReactNode } from "react";
+import Navbar from "@/components/Navbar";
+import Footbar from "@/components/Footbar";
 
-const BaseLayouts: FC = (): ReactElement => {
-  return <></>;
+type BaseLayoutType = {
+  children: ReactNode;
+};
+
+const BaseLayouts: FC<BaseLayoutType> = ({ children }): ReactElement => {
+  return (
+    <>
+      <Navbar />
+      <div className="flex h-screen justify-center items-center w-screen">{children}</div>
+      <Footbar />
+    </>
+  );
 };
 
 export default BaseLayouts;
