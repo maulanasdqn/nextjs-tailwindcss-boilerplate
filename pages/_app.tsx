@@ -10,7 +10,7 @@ import { useRouter } from "next/router";
 const queryClient = new QueryClient();
 
 ApiService.init(configs.apiURL);
-const publicRoutes = ["/"];
+const publicRoutes = ["/", "/auth/login", "/auth/register"];
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
