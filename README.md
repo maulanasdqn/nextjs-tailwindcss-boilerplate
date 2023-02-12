@@ -7,6 +7,7 @@ Requirements :
 - React
 - Next
 - Racoil
+- Zod
 - Tanstack Query
 - React Hook Form
 - Jest
