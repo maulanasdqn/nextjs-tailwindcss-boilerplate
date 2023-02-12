@@ -108,7 +108,8 @@ Untuk bisa menggunakan husky agar berjalan baik dan benar maka perlu di inisiali
 
 - Jalankan perintah
   > `npx husky-init`
-  
- ## Demo App
- - [Development Build](https://nextjs-tailwindcss-boilerplate-teal.vercel.app/)
- - [Production Build](https://nextjs-tailwindcss-boilerplate.netlify.app//)
+
+## Demo App
+
+- [Development Build](https://nextjs-tailwindcss-boilerplate-teal.vercel.app/)
+- [Production Build](https://nextjs-tailwindcss-boilerplate.netlify.app//)
