@@ -8,7 +8,7 @@ const Landing: FC = (): ReactElement => {
   return (
     <BaseLayouts>
       <Image width={500} height={500} src={Gambar} alt="hallo" />
-      <div className="flex gap-4">
+      <div className="flex gap-6 md:gap-4">
         <Button
           page={`/auth/login`}
           className="bg-blue-600 px-6 py-2 rounded-md text-white"
