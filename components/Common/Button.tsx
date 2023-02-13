@@ -1,11 +1,14 @@
 import type { FC, ReactElement } from "react";
+import Link from "next/link";
 import type { ButtonProps } from "@/utilities/interfaces/index";
 
-const Button: FC<ButtonProps> = ({ text, className }): ReactElement => {
+const Button: FC<ButtonProps> = ({ text, className, page }): ReactElement => {
   return (
-    <button className={className}>
-      <h1>{text}</h1>
-    </button>
+    <Link href={`${page}`}>
+      <button className={className}>
+        <h1>{text}</h1>
+      </button>
+    </Link>
   );
 };
 
