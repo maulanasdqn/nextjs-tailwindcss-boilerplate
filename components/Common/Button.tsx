@@ -5,9 +5,7 @@ import type { ButtonProps } from "@/utilities/interfaces/index";
 const Button: FC<ButtonProps> = ({ text, className, page }): ReactElement => {
   return (
     <Link href={`${page}`}>
-      <button className={className}>
-        <h1>{text}</h1>
-      </button>
+      <button className={className}>{text}</button>
     </Link>
   );
 };
