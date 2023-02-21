@@ -7,7 +7,11 @@ module.exports = {
     "./layouts/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        auth: "url('/bg.svg')",
+      },
+    },
   },
   plugins: [],
 };
