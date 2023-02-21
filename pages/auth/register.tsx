@@ -1,4 +1,4 @@
-import AuthLayouts from "@/layouts/Auth/AuthLayouts";
+import AuthLayouts from "@/layouts/Auth";
 import { NextPage } from "next";
 import { ReactElement } from "react";
 import Link from "next/link";

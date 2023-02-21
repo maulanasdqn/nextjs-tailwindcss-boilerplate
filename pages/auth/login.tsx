@@ -1,16 +1,18 @@
-import AuthLayouts from "@/layouts/Auth/AuthLayouts";
+import AuthLayouts from "@/layouts/Auth";
 import { NextPage } from "next";
 import { ReactElement } from "react";
-import Link from "next/link";
 import Button from "@/components/Common/Button";
 
 const Login: NextPage = (): ReactElement => {
   return (
-    <AuthLayouts title="Sign to your Account">
+    <AuthLayouts title="Halaman Login">
       <form className="space-y-4 md:space-y-6">
         <div>
-          <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 ">
-            Your email
+          <label
+            htmlFor="email"
+            className="block mb-2 text-base font-bold font-sans text-gray-900 "
+          >
+            Phone Number
           </label>
           <input
             type="email"
@@ -22,7 +24,10 @@ const Login: NextPage = (): ReactElement => {
           />
         </div>
         <div>
-          <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900 ">
+          <label
+            htmlFor="password"
+            className="block mb-2 text-base font-bold font-sans text-gray-900 "
+          >
             Password
           </label>
           <input
@@ -34,42 +39,20 @@ const Login: NextPage = (): ReactElement => {
             required
           />
         </div>
-        <div className="flex items-center justify-between">
-          <div className="flex items-start">
-            <div className="flex items-center h-5">
-              <input
-                id="remember"
-                aria-describedby="remember"
-                type="checkbox"
-                className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 "
-                required
-              />
-            </div>
-            <div className="ml-3 text-sm">
-              <label htmlFor="remember" className="text-gray-500 dark:text-gray-300">
-                Remember me
-              </label>
-            </div>
-          </div>
-          <a href="#" className="text-sm font-medium text-primary-600 hover:underline ">
-            Forgot password?
-          </a>
-        </div>
-        <div className="flex justify-center">
+        <div className="flex w-full gap-x-4 justify-center">
+          <Button
+            page={`/auth/register`}
+            className="my-4 border-2 w-auto h-auto border-red-600 text-red-600 font-bold py-3 px-20 rounded-md"
+            text="Daftar"
+            type={"button"}
+          />
           <Button
             page={`/`}
-            className="my-4 border-2 border-blue-400 text-blue-400 font-bold px-20 py-1 rounded-md text-white"
-            text="Login"
+            className="my-4 border-2 border-transparent bg-red-600 text-white font-bold px-20 py-3 rounded-md"
+            text="Masuk"
             type={"button"}
           />
         </div>
-
-        <p className="text-sm font-light text-gray-500 ">
-          Don’t have an account yet?{" "}
-          <Link href="/auth/register" className="font-medium text-primary-600 hover:underline ">
-            Sign up
-          </Link>
-        </p>
       </form>
     </AuthLayouts>
   );
